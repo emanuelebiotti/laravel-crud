@@ -1,6 +1,9 @@
-@foreach($products as $product)
+@forelse($products as $product)
+  id: {{ $product->id }}
   nome: {{ $product->name }}
   descrizione: {{ $product->description}}
   prezzo: {{ $product->price}}
   <br>
-@endforeach
+  @empty
+  <p>non ci sono prodotti</p>
+@endforelse

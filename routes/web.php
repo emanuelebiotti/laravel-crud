@@ -22,3 +22,5 @@ Route::get('index', 'StaticController@index')->name('index');
 Route::get('privacy-policy', 'StaticController@privacy')->name('privacy');
 
 Route::get('/products', 'ProductController@index');
+
+Route::get('/new-product', 'ProductController@insert');
