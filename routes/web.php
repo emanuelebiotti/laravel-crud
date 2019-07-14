@@ -17,4 +17,8 @@ Route::get('/', function () {
 
 Route::get('homepage', 'StaticController@homepage')->name('homepage');
 
+Route::get('index', 'StaticController@index')->name('index');
+
+Route::get('privacy-policy', 'StaticController@privacy')->name('privacy');
+
 Route::get('/products', 'ProductController@index');
