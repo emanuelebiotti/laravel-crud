@@ -22,7 +22,12 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $dati = $request->all();
+        $new_book = new Book();
+        $new_book->titolo = $dati['titolo'];
+        $new_book->autore = $dati['autore'];
+        $new_book->prezzo = $dati['prezzo'];
+        $new_book->save();
     }
 
     public function show($id)
