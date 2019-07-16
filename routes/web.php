@@ -23,4 +23,6 @@ Route::get('privacy-policy', 'StaticController@privacy')->name('privacy');
 
 Route::get('/tutti', 'ProductController@prodotti');
 
-Route::get('/libri', 'BookController@libri');
+Route::get('/books', 'BookController@index');
+
+Route::resource('/books', 'BookController');
